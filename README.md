@@ -74,7 +74,7 @@ The artifact hasn't been created yet
      #(prev-page app))
 
 (.on js/document "click" (js/jQuery ".pager")
-     #(page-to app (.-data-page (.-target %))))
+     #(page-to app (.getAttribute (.-target %) "data-page")))
 
 ;;....
 ```
