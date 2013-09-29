@@ -25,6 +25,9 @@ The artifact hasn't been created yet
 (def app (atom {:page 1
                 :loading :false}))
 
+
+;;;;; PURE ;;;;;
+
 ;; Deftransition defines a function that takes the current state and arbitrary
 ;; number of arguments and returns a diff map to the state.
 ;; No side-effectful operation should happen in a transition.
@@ -42,6 +45,11 @@ The artifact hasn't been created yet
 (deftransition page-to [_state page-n]
   {:page page-n
    :loading true})
+
+
+
+
+;;;;; IMPURE ;;;;;
 
 
 ;; Watch-transion registers a side-effectful function that will get invoked
@@ -64,6 +72,9 @@ The artifact hasn't been created yet
 
 (.on js/document "click" (js/jQuery ".prev-btn")
      #(prev-page app))
+
+(.on js/document "click" (js/jQuery ".pager")
+     #(page-to app (.-data-page (.-target %))))
 
 ;;....
 ```
