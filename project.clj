@@ -3,10 +3,4 @@
   :url "http://github.com/ympbyc/pasta-cljs"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.5.1"]]
-  :plugins [[lein-cljsbuild "0.3.2"]]
-  ;;:cljsbuild
-  (comment {:builds [{:source-paths ["src"]
-                      :compiler {:output-to "resources/public/js/pasta-cljs.js"
-                                 :optimizations :simple
-                                 :pretty-print false}}]}))
+  :dependencies [[org.clojure/clojure "1.5.1"]])
