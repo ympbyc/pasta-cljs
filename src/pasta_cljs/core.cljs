@@ -1,4 +1,4 @@
-(ns pasta.core)
+(ns pasta-cljs.core)
 
 (defn watch-transition
   "Watch for state transition of a field.

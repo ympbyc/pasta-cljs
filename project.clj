@@ -1,4 +1,4 @@
-(defproject pasta-cljs "0.1.0-SNAPSHOT"
+(defproject pasta-cljs "0.1.1-SNAPSHOT"
   :description "App as a value"
   :url "http://github.com/ympbyc/pasta-cljs"
   :license {:name "Eclipse Public License"

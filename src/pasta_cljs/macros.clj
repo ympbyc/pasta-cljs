@@ -1,6 +1,6 @@
 ;*CLJSBUILD-MACRO-FILE*;
 
-(ns pasta.macros)
+(ns pasta-cljs.macros)
 
 (defmacro deftransition
   "Define a function that receives the current state and returns a patch to it.
