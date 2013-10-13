@@ -63,11 +63,12 @@ The artifact hasn't been created yet
 
 
 (watch-transition app :page
-                  ;; retrieve html, replace the content, etc.
-                  (stop-load app))
+                  (fn [st]
+                    ;; retrieve html, replace the content, etc.
+                    (stop-load app)))
 
 
-(.on js/document  "click" (js/jQuery ".next-btn")
+(.on js/document "click" (js/jQuery ".next-btn")
      #(next-page app))
 
 (.on js/document "click" (js/jQuery ".prev-btn")
